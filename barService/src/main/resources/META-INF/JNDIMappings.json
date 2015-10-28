@@ -1,0 +1,5 @@
+{
+  "mappings" : {
+    "BarService" : "ejb:barService_ear-0.0.1-SNAPSHOT/barService/BarServiceBean!de.cellent.test.barService.BarService"
+  }
+}
