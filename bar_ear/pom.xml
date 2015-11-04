@@ -29,12 +29,12 @@
 							<groupId>de.cellent.test</groupId>
 							<artifactId>barComponent</artifactId>
 						</ejbModule>
-						<!-- 
 						<ejbModule>
 							<groupId>de.cellent.test</groupId>
-							<artifactId>foo</artifactId>
+							<artifactId>barInternalClient</artifactId>
 						</ejbModule>
-						 -->
+						<!-- <ejbModule> <groupId>de.cellent.test</groupId> <artifactId>foo</artifactId> 
+							</ejbModule> -->
 					</modules>
 					<fileNameMapping>no-version</fileNameMapping>
 				</configuration>
@@ -56,13 +56,13 @@
 			<version>0.0.1-SNAPSHOT</version>
 			<type>ejb</type>
 		</dependency>
-		<!-- 
 		<dependency>
 			<groupId>de.cellent.test</groupId>
-			<artifactId>foo</artifactId>
+			<artifactId>barInternalClient</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<type>ejb</type>
 		</dependency>
-		 -->
+		<!-- <dependency> <groupId>de.cellent.test</groupId> <artifactId>foo</artifactId> 
+			<version>0.0.1-SNAPSHOT</version> <type>ejb</type> </dependency> -->
 	</dependencies>
 </project>
