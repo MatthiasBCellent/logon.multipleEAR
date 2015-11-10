@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jboss-deployment-structure>
-	<ear-subdeployments-isolated>true</ear-subdeployments-isolated>
+	<ear-subdeployments-isolated>false</ear-subdeployments-isolated>
 	<deployment>
 		<dependencies>
-			<module name="deployment.barService_ear-0.0.1-SNAPSHOT.ear"	export="true" />
+			<module name="deployment.barService_ear-0.0.1-SNAPSHOT.ear"	export="true" />		 
 			<module name="deployment.barService_ear-0.0.1-SNAPSHOT.ear.barService.jar"	export="true" />
 			<module name="deployment.barService_ear-0.0.1-SNAPSHOT.ear.barComponent.jar"	export="true" />
 		</dependencies>

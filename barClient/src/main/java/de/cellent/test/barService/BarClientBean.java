@@ -1,14 +1,11 @@
 package de.cellent.test.barService;
 
-import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.ejb.Remote;
 import javax.ejb.Stateless;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
-
-import de.cellent.test.util.InternalJNDIBrowserBean;
 
 /**
  * This is the test, whether we can inject BarService from another ear ...
@@ -30,14 +27,13 @@ public class BarClientBean implements BarClient {
 //	private BarService service;
 	
 	// hand-made 
-//	@EJB(mappedName = "java:global/BarService/BarBeanByMappedName")
-//	private BarService service;
-	
-	// old school
+	@EJB(mappedName = "java:global/BarService/BarBeanByMappedName")
 	private BarService service;
 	
-	@EJB
-	private InternalJNDIBrowserBean jndiBrowser;
+	// old school
+//	private BarService service;
+	
+	
 	
 	public String accessBar(String msg) {
 		String ret = service.doBar(msg);
@@ -45,12 +41,12 @@ public class BarClientBean implements BarClient {
 	}
 	
 	// this is the old-school alternative
-	@PostConstruct
+//	@PostConstruct
 	public void init() {
 		try {
 			Context ctx = new InitialContext();
 //			this.service = (BarService) ctx.lookup("ejb:barService_ear-0.0.1-SNAPSHOT/barComponent/BarServiceBean!de.cellent.test.barService.BarService");
-			this.service = (BarService) ctx.lookup(jndiBrowser.getLookupString(BarService.class));
+//			this.service = (BarService) ctx.lookup(jndiBrowser.getLookupString(BarService.class));
 		} catch (NamingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

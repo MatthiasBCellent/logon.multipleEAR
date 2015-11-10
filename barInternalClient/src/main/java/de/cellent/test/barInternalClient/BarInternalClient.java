@@ -6,4 +6,5 @@ import javax.ejb.Remote;
 public interface BarInternalClient {
 	
 	String doBar(String msg);
+	void getConnection();
 }

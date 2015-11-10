@@ -12,10 +12,15 @@ public class BarInternalClientTest {
 		
 		BarInternalClientTest test = new BarInternalClientTest();
 		test.testDoBar();
+		test.testGetConnection();
 	}
 	
 	public void testDoBar() {
 		System.out.println(service.doBar("do Bar"));
+	}
+	
+	public void testGetConnection() {
+		service.getConnection();
 	}
 	
 	public static void setUp() {
